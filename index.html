@@ -55,21 +55,22 @@
 		<section class="contact wrap" id="contact">
 			<div class="contact-card"><div><span class="eyebrow">Let's find your place</span><h2>Want to know more?</h2><p>Call or email Sami to ask about rooms and arrange a chat.</p></div><div class="contact-actions"><a class="button" href="tel:+447575564650"><span aria-hidden="true">☎</span> +44 7575 564650</a><a class="button light" href="mailto:imamargate@gmail.com"><span aria-hidden="true">✉</span> Email Sami</a></div></div>
 			<div class="contact-form-wrap">
-				<form class="contact-form" action="https://splitforms.com" method="POST">
+				<form class="contact-form" action="https://splitforms.com/api/submit" method="POST">
 					<input type="hidden" name="access_key" value="e8c795b657d640c990fcdc7f6471b164">
 
-					<label for="name">Name</label>
-					<input type="text" id="name" name="name" placeholder="Your name" required>
+					<label for="sf-name">Name</label>
+					<input type="text" id="sf-name" name="name" autocomplete="name" required>
 
-					<label for="email">Email</label>
-					<input type="email" id="email" name="email" placeholder="Your email" required>
+					<label for="sf-email">Email</label>
+					<input type="email" id="sf-email" name="email" autocomplete="email" required>
 
-					<label for="message">Message</label>
-					<textarea id="message" name="message" placeholder="Message" required></textarea>
+					<label for="sf-message">Message</label>
+					<textarea id="sf-message" name="message" rows="4" required></textarea>
 
-					<input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
+					<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 					<button class="button" type="submit">Send</button>
 				</form>
+				<script src="https://splitforms.com/embed.js" async></script>
 			</div>
 		</section>
 	</main>
